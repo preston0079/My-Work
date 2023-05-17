@@ -1,52 +1,38 @@
-#Assignment 3 - I Have a Little Dreidel
+## Assignment 4 - The Game of Life
 
-This program will simulate a game of dreidel. The user can input a number of various commands to change the game such as how many players play and if they wish to input a seed in order to repeat a previous simulation. These will be explained down below. The program will work without those inputs as there are default options set in place.
+This program will simulate The Game of Life. It takes in a variety of inputs and outputs the results into a specified file (optional). Instructions are given below on what can be inputted.
 
 ## Building
-Run the following in order to run the program.
 
-Installs make, works with makefile 
+Run the following in order to run the program:
 
+Installs make, works with makefile
 '''
 $ sudo apt install make
 '''
 
+Input this into terminal right before inputing life.c
+'''
+make all
+'''
+
 ## Running
 
-First clear compiler files with:
-
+Run life.c with this command in the terminal
 '''
-$ make clear
-'''
-
-Then compile with:
-
-'''
-$ make all
-'''
-
-
-Finally, run play-dreidel with this command in the terminal
-
-'''
-./play-dreidel -
+./life
 '''
 
 Followed by:
 
-p (followed by a number between 2-8, inclusive, to state how many players you want to play)
+-t             Create your universe as a toroidal
 
-c (followed by a number between 1-20, inclusive, to state how many coins each player starts out with)
+-s             Silent - do not use animate the evolution
 
-s (followed by a number which will be the seed, used to repeat previous simulations)
+-n {number}    Number of generations [default: 100]
 
-v (v is the option to have a message print when a player is eliminated)
+-i {file}      Input file [default: stdin]
 
-For example:
+-o {file}      Output file [default: stdout]
 
-./play-dreidel -p 5
-
-or 
-
-./play-dreidel -v
-
+-h             Prints out help message
